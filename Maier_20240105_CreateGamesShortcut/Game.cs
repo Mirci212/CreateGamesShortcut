@@ -13,13 +13,14 @@ public class Game : IComparable<Game>
     static protected string[] priority = { "run", "EU" };
 
     string folderName = "";
-    long gameSize;
     protected string gamePath;
     public string ExeFile { get; set; }
 
     public string ExeFileName => Path.GetFileNameWithoutExtension(ExeFile);
 
-    public long GameSize => gameSize;
+    public long GameSize { get; set; }
+
+    public string GameSizeInGB => $"{ProgramManager.ConvertBytes(GameSize,"GB"):0.00} GB";
 
     public string FolderName
     {
@@ -51,7 +52,7 @@ public class Game : IComparable<Game>
     {
         GamePath = gamePath;
         ExeFile = FindExeFile();
-        gameSize = GetFolderSize(new DirectoryInfo(GamePath));
+        GameSize = GetFolderSize(new DirectoryInfo(GamePath));
     }
 
     public virtual string FindExeFile()
@@ -196,8 +197,8 @@ public class GameList
     {
         StringBuilder sb = new StringBuilder();
         sb.AppendLine(".: Infos of all the games :.");
-        sb.AppendLine("Alle Games: " + string.Join(", ",list.Select(x => x.FolderName)));
-        sb.AppendLine("Anzahl der Games: " + list.Count);
+        sb.AppendLine("**Alle Games:** \n" + string.Join("\n",list.Select(x => x.FolderName)));
+        sb.AppendLine("\nAnzahl der Games: " + list.Count);
         sb.AppendLine($"Gesamtgröße: {ProgramManager.ConvertBytes(GetSumSize(),"GB"):0.00} GB");
         File.WriteAllText(filename, sb.ToString());
     }
