@@ -199,7 +199,7 @@ public class GameList
         sb.AppendLine(".: Infos of all the games :.");
         sb.AppendLine("**Alle Games:** \n" + string.Join("\n",list.Select(x => x.FolderName)));
         sb.AppendLine("\nAnzahl der Games: " + list.Count);
-        sb.AppendLine($"Gesamtgröße: {ProgramManager.ConvertBytes(GetSumSize(),"GB"):0.00} GB");
+        sb.AppendLine($"Gesamtgröße: {GameSizeGB}");
         File.WriteAllText(filename, sb.ToString());
     }
 
