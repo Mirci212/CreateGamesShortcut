@@ -203,6 +203,8 @@ public class GameList
         File.WriteAllText(filename, sb.ToString());
     }
 
+    public string GameSizeGB => $"{ProgramManager.ConvertBytes(list.Sum(g => g.GameSize), "GB"):0.00} GB";
+
 
     public void Clear()
     {
