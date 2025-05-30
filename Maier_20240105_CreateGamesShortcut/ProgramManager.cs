@@ -31,6 +31,12 @@ public class ProgramManager
 
     public static void ClearFolderFromFiles(string folder)
     {
+        if(!Directory.Exists(folder))
+        {
+            Directory.CreateDirectory(folder);
+            return;
+        }
+
         foreach(FileInfo file in new DirectoryInfo(folder).GetFiles())
         {
             file.Delete();
@@ -110,47 +116,47 @@ public class ProgramManager
 
 
 
-public class InternetClient
-{
-    HttpClient client = new HttpClient();
-    string apiToken = "";
-    string baseAdress;
+//public class InternetClient
+//{
+//    HttpClient client = new HttpClient();
+//    string apiToken = "";
+//    string baseAdress;
     
 
-    public InternetClient(string baseAddress)
-    {
-        client.BaseAddress = new Uri(baseAddress);
-    }
+//    public InternetClient(string baseAddress)
+//    {
+//        client.BaseAddress = new Uri(baseAddress);
+//    }
 
-    public InternetClient(string baseAddress, string apiToken) : this(baseAddress)
-    {
-        this.apiToken = $"key={apiToken}";
-    }
+//    public InternetClient(string baseAddress, string apiToken) : this(baseAddress)
+//    {
+//        this.apiToken = $"key={apiToken}";
+//    }
 
-    public async Task<JsonDocument> TryGetJsonAsync(string input,string parameters)
-    {
-        try
-        {
-            if (apiToken == "")
-            {
-                parameters = input + "?" + parameters;
-            }
-            else
-            {
-                parameters = input + "?" + apiToken + "&" + parameters;
-            }
+//    public async Task<JsonDocument> TryGetJsonAsync(string input,string parameters)
+//    {
+//        try
+//        {
+//            if (apiToken == "")
+//            {
+//                parameters = input + "?" + parameters;
+//            }
+//            else
+//            {
+//                parameters = input + "?" + apiToken + "&" + parameters;
+//            }
             
-            return await client.GetFromJsonAsync<JsonDocument>(parameters);
+//            return await client.GetFromJsonAsync<JsonDocument>(parameters);
 
 
-        }
-        catch (Exception ex)
-        {
-            return null;
-        }
+//        }
+//        catch (Exception ex)
+//        {
+//            return null;
+//        }
         
-    }
+//    }
 
 
-}
+//}
 

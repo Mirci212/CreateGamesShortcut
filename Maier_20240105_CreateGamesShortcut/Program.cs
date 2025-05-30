@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 GC.Collect();
 GC.WaitForPendingFinalizers();
 
-string targetPath = "C:\\Users\\Marco\\Desktop\\Games\\";
+string targetPath = $"C:\\Users\\{Environment.UserName}\\Desktop\\Games\\";
 string sourcePath = "D:\\Games";
 string sourcePath2 = "D:\\SteamLibrary\\steamapps\\common";
 string GameSize = "GB";
