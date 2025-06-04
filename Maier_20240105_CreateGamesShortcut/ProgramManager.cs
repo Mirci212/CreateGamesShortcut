@@ -82,59 +82,72 @@ public class ProgramManager
 
         // CMD-Skript das den Ordner und Verknüpfung löscht
         string scriptContent =
-             $"@echo off\n" +
-             $"echo --------------------------------------------------------\n" +
-             $"echo                SPIEL-DEINSTALLATION\n" +
-             $"echo --------------------------------------------------------\n" +
-             $"echo.\n" +
-             $"echo Spiel: {game.FolderName}\n" +
-             $"echo Groesse: {game.GameSizeInGB}\n" +
-             $"echo.\n" +
-             $"echo ACHTUNG: Das Spiel wird komplett geloescht!\n" +
-             $"echo.\n" +
-             $"set /p confirm=Moechten Sie '{game.FolderName}' ({game.GameSizeInGB} GB) wirklich deinstallieren? [J/N] \n" +
-             $"if /i \"%confirm%\" neq \"J\" (\n" +
-             $"   echo Deinstallation abgebrochen.\n" +
-             $"   pause\n" +
-             $"   exit /b\n" +
-             $")\n" +
-             $"\n" +
-             $"echo Deinstallation wird gestartet...\n" +
-             $"echo.\n" +
-             $"\n" +
-             $":: Fortschrittsanzeige beim Loeschen\n" +
-             $"echo [                    ] 0%%\n" +
-             $"timeout /t 1 /nobreak >nul\n" +
-             $"\n" +
-             $":: 1. Verknüpfungen loeschen (25%)\n" +
-             $"del \"{shortcutPath}\" >nul 2>&1\n" +
-             $"del \"{Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms)}\\Games\\{game.FolderName}.lnk\" >nul 2>&1\n" +
-             $"echo [====                ] 25%%\n" +
-             $"\n" +
-             $":: 2. Registry-Eintraege entfernen (50%)\n" +
-             $"reg delete HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{game.FolderName} /f >nul 2>&1\n" +
-             $"echo [========            ] 50%%\n" +
-             $"\n" +
-             $":: 3. Spielordner loeschen mit Fortschritt\n" +
-             $"echo [============        ] 75%%\n" +
-             $"if exist \"{game.GamePath}\" (\n" +
-             $"   rmdir /s /q \"{game.GamePath}\"\n" +
-             $"   if exists \"{game.GamePath}\" (\n" +
-             $"      echo FEHLER beim Loeschen des Spielordners!\n" +
-             $"      pause\n" +
-             $"      exit /b 1\n" +
-             $"   )\n" +
-             $")\n" +
-             $"\n" +
-             $":: 4. Abschluss (100%)\n" +
-             $"echo [====================] 100%%\n" +
-             $"echo.\n" +
-             $"echo Deinstallation erfolgreich abgeschlossen!\n" +
-             $"timeout /t 10 /nobreak >nul\n" +
-             $"\n" +
-             $":: Skript selbst loeschen\n" +
-             $"del \"%~f0\" >nul 2>&1";
-             
+        $@"@echo off
+        echo --------------------------------------------------------
+        echo                SPIEL-DEINSTALLATION
+        echo --------------------------------------------------------
+        echo.
+        echo Spiel: {game.FolderName}
+        echo Groesse: {game.GameSizeInGB} GB
+        echo.
+        echo ACHTUNG: Das Spiel wird komplett geloescht!
+        echo.
+        set /p confirm=Moechten Sie '{game.FolderName}' ({game.GameSizeInGB} GB) wirklich deinstallieren? [J/N] 
+        if /i ""%confirm%"" neq ""J"" (
+            echo Deinstallation abgebrochen.
+            pause
+            exit /b
+        )
+
+        echo Deinstallation wird gestartet...
+        echo.
+        echo [                    ] 0%%
+        timeout /t 1 /nobreak >nul
+
+        :: 1. Verknuepfungen loeschen (25%)
+        del ""{shortcutPath}"" >nul 2>&1
+        del ""{Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms)}\Games\{game.FolderName}.lnk"" >nul 2>&1
+        echo [====                ] 25%%
+
+        :: 2. Registry-Eintraege entfernen (50%)
+        reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\{game.FolderName} /f >nul 2>&1
+        echo [========            ] 50%%
+
+        :: 3. Spielordner loeschen mit Fortschritt (75%)
+        echo [============        ] 75%%
+        if exist ""{game.GamePath}"" (
+            rmdir /s /q ""{game.GamePath}""
+            if exist ""{game.GamePath}"" (
+                echo FEHLER beim Loeschen des Spielordners!
+                pause
+                exit /b 1
+            )
+        )
+
+        :: 4. Plattform-Manifeste bereinigen (85%)
+        echo [===============     ] 85%%
+
+        :: Epic Games Manifeste löschen
+        for %%F in (""%ProgramData%\Epic\EpicGamesLauncher\Data\Manifests\*.item"") do (
+            findstr /i ""{game.ExeFileName}.exe"" ""%%F"" >nul 2>&1
+            if not errorlevel 1 (
+                del /q ""%%F"" >nul 2>&1
+                echo Epic-Manifest geloescht: %%~nxF
+            )
+        )
+
+        :: 5. Abschluss (100%)
+        echo [====================] 100%%
+        echo.
+        echo Deinstallation erfolgreich abgeschlossen!
+        timeout /t 5 /nobreak >nul
+
+        :: Skript selbst loeschen (mit Verzoegerung)
+        start /b "" cmd /c ""timeout /t 1 >nul & del /f /q ""{scriptPath}""""
+        exit";
+
+
+
 
         System.IO.File.WriteAllText(scriptPath, scriptContent);
         return scriptPath;
