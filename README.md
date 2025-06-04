@@ -1,4 +1,4 @@
-```markdown
+
 # 🎮 Game Manager - Complete Setup Guide
 
 ## 📁 Required Game Folder Structure
