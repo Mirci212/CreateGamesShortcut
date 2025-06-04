@@ -26,7 +26,7 @@ File.WriteAllText("../../../Games.json", JsonSerializer.Serialize(games.Result, 
 File.WriteAllText($"{targetPath}Games.json", JsonSerializer.Serialize(games.Result, options));
 
 
-string copyPathFolder = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Games\\";
+string copyPathFolder = $"{Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms)}\\Games\\";
 
 Console.WriteLine($"Copy to {targetPath} to {copyPathFolder}");
 ProgramManager.CopyFilesRecursively(targetPath, copyPathFolder);

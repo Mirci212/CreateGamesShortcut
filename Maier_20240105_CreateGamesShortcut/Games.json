@@ -343,8 +343,8 @@
       "GamePath": "D:\\Games\\PC Games\\shapez.2.v0.0.8"
     },
     {
-      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\wallpaper_engine\\bin\\webwallpaper32.exe",
-      "ExeFileName": "webwallpaper32",
+      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\wallpaper_engine\\launcher.exe",
+      "ExeFileName": "launcher",
       "UninstallExe": "",
       "GameSize": 1304643132,
       "GameSizeInGB": "1,22 GB",
@@ -433,15 +433,6 @@
       "GamePath": "D:\\Games\\Epic Games\\Brotato"
     },
     {
-      "ExeFile": "D:\\Games\\Epic Games\\MinutesTillDawnxgosd\\MinutesTillDawn.exe",
-      "ExeFileName": "MinutesTillDawn",
-      "UninstallExe": "",
-      "GameSize": 133464101,
-      "GameSizeInGB": "0,12 GB",
-      "FolderName": "MinutesTillDawnxgosd",
-      "GamePath": "D:\\Games\\Epic Games\\MinutesTillDawnxgosd"
-    },
-    {
       "ExeFile": "D:\\Games\\PC Games\\The.Farmer.Was.Replaced.v2024.12.18\\TheFarmerWasReplaced.exe",
       "ExeFileName": "TheFarmerWasReplaced",
       "UninstallExe": "",
@@ -451,5 +442,5 @@
       "GamePath": "D:\\Games\\PC Games\\The.Farmer.Was.Replaced.v2024.12.18"
     }
   ],
-  "GameSizeGB": "848,73 GB"
+  "GameSizeGB": "848,60 GB"
 }

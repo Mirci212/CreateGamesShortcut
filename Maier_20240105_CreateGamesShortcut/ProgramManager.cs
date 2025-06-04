@@ -47,6 +47,7 @@ public class ProgramManager
             key.SetValue("DisplayName", game.FolderName);
             key.SetValue("DisplayIcon", game.ExeFile);
             key.SetValue("InstallLocation", Path.GetDirectoryName(game.ExeFile));
+            key.SetValue("Publisher", "Games");
 
             if (!string.IsNullOrEmpty(game.UninstallExe))
             {
@@ -85,7 +86,7 @@ public class ProgramManager
          "timeout /t 1 /nobreak >nul\n" +
          $"rmdir /s /q \"{game.GamePath}\"\n" +
          $"del \"{shortcutPath}\"\n" +
-         $"del \"{Environment.GetFolderPath(Environment.SpecialFolder.Programs)}\\Games\\{game.FolderName}.lnk\"\n" +
+         $"del \"{Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms)}\\Games\\{game.FolderName}.lnk\"\n" +
          $"reg delete HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{game.FolderName} /f\n" +
          "del \"%~f0\"";
 
