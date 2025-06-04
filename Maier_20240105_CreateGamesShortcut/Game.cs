@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 
 public class Game : IComparable<Game>
 {
-    static protected string[] invalidExe = { "unins","dot", "handler", "clean", "repo", "inst", "ui", "util", "dx", "setup", "vcredist", "crashsender", "webhelper", "AllOS", "AC4BFMP","epiclauncher", "Unity", "dedicated","dump", "ffmpeg" };
+    static protected string[] invalidExe = { "unins", "dot", "handler", "clean", "repo", "inst", "ui", "util", "dx", "setup", "vcredist", "crashsender", "webhelper", "AllOS", "AC4BFMP", "epiclauncher", "Unity", "dedicated", "dump", "ffmpeg" };
     static protected string[] priority = { "run", "EU" };
 
     string folderName = "";
@@ -22,7 +17,7 @@ public class Game : IComparable<Game>
 
     public long GameSize { get; set; }
 
-    public string GameSizeInGB => $"{ProgramManager.ConvertBytes(GameSize,"GB"):0.00} GB";
+    public string GameSizeInGB => $"{ProgramManager.ConvertBytes(GameSize, "GB"):0.00} GB";
 
     public string FolderName
     {
@@ -48,13 +43,11 @@ public class Game : IComparable<Game>
     }
 
 
-
-
     public Game(string gamePath)
     {
         GamePath = gamePath;
         ExeFile = FindExeFile();
-        UninstallExe = FindUninstallExe(); 
+        UninstallExe = FindUninstallExe();
         GameSize = GetFolderSize(new DirectoryInfo(GamePath));
     }
 
@@ -88,7 +81,8 @@ public class Game : IComparable<Game>
             };
 
             return Directory.EnumerateFiles(gamePath, "unins*.exe", SearchOption.AllDirectories)
-                .OrderBy(exe => {
+                .OrderBy(exe =>
+                {
                     string fileName = Path.GetFileName(exe).ToLower();
                     int index = Array.IndexOf(preferredNames, fileName);
                     return index == -1 ? int.MaxValue : index;
@@ -217,9 +211,9 @@ public class GameList
 
     public void WriteGamesInfoFile(string filename)
     {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new();
         sb.AppendLine(".: Infos of all the games :.");
-        sb.AppendLine("**Alle Games:** \n" + string.Join("\n",list.Select(x => x.FolderName)));
+        sb.AppendLine("**Alle Games:** \n" + string.Join("\n", list.Select(x => x.FolderName)));
         sb.AppendLine("\nAnzahl der Games: " + list.Count);
         sb.AppendLine($"Gesamtgröße: {GameSizeGB}");
         File.WriteAllText(filename, sb.ToString());

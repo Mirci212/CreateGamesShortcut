@@ -1,8 +1,5 @@
-﻿using Maier_20240105_CreateGamesShortcut.Properties;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Text.Json;
-using System.Text.Json.Nodes;
-using System.Text.Json.Serialization;
 
 GC.Collect();
 GC.WaitForPendingFinalizers();
@@ -12,7 +9,7 @@ string sourcePath = "D:\\Games";
 string sourcePath2 = "D:\\SteamLibrary\\steamapps\\common";
 string GameSize = "GB";
 
-Stopwatch stopwatch = new Stopwatch();
+Stopwatch stopwatch = new();
 
 ProgramManager.ClearFolderFromFiles(targetPath);
 stopwatch.Start();
@@ -24,7 +21,7 @@ Console.WriteLine($"Gebrauchte Zeit: {stopwatch.Elapsed.TotalSeconds} s");
 ProgramManager.CreateShortcutsFromGameList(games.Result, targetPath, GameSize);
 games.Result.WriteGamesInfoFile(targetPath + "\\GameInfo.txt");
 games.Result.SortList();
-JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
+JsonSerializerOptions options = new() { WriteIndented = true };
 File.WriteAllText("../../../Games.json", JsonSerializer.Serialize(games.Result, options));
 File.WriteAllText($"{targetPath}Games.json", JsonSerializer.Serialize(games.Result, options));
 
