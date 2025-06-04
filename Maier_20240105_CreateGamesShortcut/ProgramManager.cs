@@ -74,7 +74,6 @@ public class ProgramManager
         // Skriptpfad im Unterordner
         string scriptPath = Path.Combine(uninstallFolder, $"{game.FolderName}_uninstall.cmd");
 
-        string gameFolder = Path.GetDirectoryName(game.ExeFile);
         string shortcutPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
             "Games",
@@ -84,8 +83,9 @@ public class ProgramManager
         string scriptContent =
          "@echo off\n" +
          "timeout /t 1 /nobreak >nul\n" +
-         $"rmdir /s /q \"{gameFolder}\"\n" +
+         $"rmdir /s /q \"{game.GamePath}\"\n" +
          $"del \"{shortcutPath}\"\n" +
+         $"del \"{Environment.GetFolderPath(Environment.SpecialFolder.Programs)}\\Games\\{game.FolderName}.lnk\"\n" +
          $"reg delete HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{game.FolderName} /f\n" +
          "del \"%~f0\"";
 

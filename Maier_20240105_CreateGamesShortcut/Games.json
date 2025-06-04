@@ -334,15 +334,6 @@
       "GamePath": "D:\\Games\\PC Games\\Melatonin.v2024.03.11"
     },
     {
-      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\wallpaper_engine\\distribution\\bin\\applicationwallpaperinject32.exe",
-      "ExeFileName": "applicationwallpaperinject32",
-      "UninstallExe": "",
-      "GameSize": 1683153396,
-      "GameSizeInGB": "1,57 GB",
-      "FolderName": "wallpaper_engine",
-      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\wallpaper_engine"
-    },
-    {
       "ExeFile": "D:\\Games\\PC Games\\shapez.2.v0.0.8\\shapez.2.v0.0.8\\shapez 2.exe",
       "ExeFileName": "shapez 2",
       "UninstallExe": "",
@@ -350,6 +341,15 @@
       "GameSizeInGB": "1,41 GB",
       "FolderName": "shapez 2 v0 0 8",
       "GamePath": "D:\\Games\\PC Games\\shapez.2.v0.0.8"
+    },
+    {
+      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\wallpaper_engine\\bin\\webwallpaper32.exe",
+      "ExeFileName": "webwallpaper32",
+      "UninstallExe": "",
+      "GameSize": 1304643132,
+      "GameSizeInGB": "1,22 GB",
+      "FolderName": "wallpaper_engine",
+      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\wallpaper_engine"
     },
     {
       "ExeFile": "D:\\Games\\PC Games\\SummertimeSaga-0-20-16-pc\\SummertimeSaga.exe",
@@ -451,5 +451,5 @@
       "GamePath": "D:\\Games\\PC Games\\The.Farmer.Was.Replaced.v2024.12.18"
     }
   ],
-  "GameSizeGB": "849,08 GB"
+  "GameSizeGB": "848,73 GB"
 }

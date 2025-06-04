@@ -4,7 +4,7 @@ using System.Text.Json;
 GC.Collect();
 GC.WaitForPendingFinalizers();
 
-string targetPath = $"C:\\Users\\{Environment.UserName}\\Desktop\\Games\\";
+string targetPath = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Games\\";
 string sourcePath = "D:\\Games";
 string sourcePath2 = "D:\\SteamLibrary\\steamapps\\common";
 string GameSize = "GB";
