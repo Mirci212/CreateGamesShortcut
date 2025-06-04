@@ -1,172 +1,182 @@
+# 🎮 Game Manager - Dokumentation
 
-# 🎮 Mein Game Manager Programm - Vollständige Dokumentation
+![Game Manager Banner](https://via.placeholder.com/800x200.png?text=Game+Manager+-+Your+Ultimate+Game+Organizer)
 
-## 📌 **Kernfunktionen MEINES Programms**
+## Inhaltsverzeichnis
+1. [📌 Übersicht](#-übersicht)
+2. [⚙️ Funktionsweise](#️-funktionsweise)
+   - [🎯 Game-Klasse](#-game-klasse)
+   - [📋 GameList-Klasse](#-gamelist-klasse)
+   - [🛠️ ProgramManager-Klasse](#️-programmanager-klasse)
+   - [🚀 Hauptprogramm](#-hauptprogramm)
+3. [📥 Installation und Verwendung](#-installation-und-verwendung)
+4. [🔧 Technische Details](#-technische-details)
+5. [📊 Beispielkonfiguration](#-beispielkonfiguration)
+6. [✨ Erweiterungsmöglichkeiten](#-erweiterungsmöglichkeiten)
 
-### 🔍 **Spielerkennung**
-✔ **Automatisches Scannen** von:
-- `D:\Games\` (inkl. Unterordner wie "Epic Games", "PC Games")
-- `D:\SteamLibrary\steamapps\common`
+## 📌 Übersicht
 
-✔ **Intelligente EXE-Erkennung**:
-- Filtert Systemdateien wie `unins000.exe`, `vcredist.exe` heraus
-- Priorisiert Haupt-EXEs mit Namen wie:
-  - `GameName.exe`
-  - `Launcher.exe`
-  - Versionen mit "EU" (z.B. `AOT2_EU.exe`)
+![Game Manager Flowchart](https://via.placeholder.com/600x400.png?text=Game+Manager+Workflow)
 
-### 📂 **Dateistruktur-Unterstützung**
-Mein Programm erkennt Spiele in diesen Formaten:
-```
-D:\Games\Epic Games\HorizonZeroDawn\HorizonZeroDawn.exe
-D:\Games\PC Games\ELDEN RING\Game\eldenring.exe
-D:\SteamLibrary\steamapps\common\Satisfactory\FactoryGame.exe
-```
+Der Game Manager ist eine C#-Anwendung, die entwickelt wurde, um eine Sammlung von PC-Spielen zu verwalten. Die Hauptfunktionen umfassen:
 
-### 📊 **Spielinformationen**
-Für JEDES Spiel werden gespeichert:
-```csharp
-public class Game {
-    public string ExeFile { get; set; }      // Vollständiger Pfad zur EXE
-    public string ExeFileName { get; set; }  // Nur Dateiname (ohne .exe)
-    public string UninstallExe { get; set; } // Deinstaller-Pfad (falls vorhanden)
-    public long GameSize { get; set; }       // Größe in Bytes
-    public string GamePath { get; set; }     // Installationsordner
-}
-```
+- 🔍 Automatische Erkennung von Spielen in festgelegten Verzeichnissen
+- 📌 Erstellung von Desktop-Verknüpfungen für alle gefundenen Spiele
+- 💾 Berechnung der Speichergröße jedes Spiels
+- 🗑️ Bereitstellung von Deinstallationsmöglichkeiten
+- 📄 Generierung einer Übersichtsdatei mit allen Spielinformationen
+- 📦 JSON-Export der Spieledaten
 
-### 🖱️ **Verknüpfungsverwaltung**
-✔ **Erstellt auf dem Desktop**:
-- Ordner `Desktop\Games\`
-- Verknüpfungen wie `HorizonZeroDawn.lnk`
-- **Angezeigte Infos**:
-  - Spielname
-  - Größe (z.B. "72,23 GB")
-  - Installationspfad als Kommentar
+## ⚙️ Funktionsweise
 
-✔ **Startmenü-Einträge**:
-- Unterordner `Startmenü\Programme\Games\`
-- Gleiche Funktion wie Desktop-Verknüpfungen
+### 🎯 Game-Klasse
 
-### 🗑️ **Deinstallationssystem**
 ```mermaid
-graph TD
-    A[Start] --> B{Uninstall.exe vorhanden?}
-    B -->|Ja| C[Standard-Deinstaller nutzen]
-    B -->|Nein| D[Eigenes Skript erstellen]
-    C --> E[Fertig]
-    D --> F[Skript löscht:<br>1. Spielordner<br>2. Verknüpfungen<br>3. Registry-Einträge]
-    F --> E
+classDiagram
+    class Game {
+        +string ExeFile
+        +string ExeFileName
+        +string UninstallExe
+        +long GameSize
+        +string GameSizeInGB
+        +string FolderName
+        +string GamePath
+        +FindExeFile() string
+        +FindUninstallExe() string
+        +ExeContainsInvalid() bool
+        +SortPriorities() string[]
+        +GetFolderSize() long
+    }
 ```
 
-### 📝 **Berichtsfunktionen**
-1. **GameInfo.txt** auf dem Desktop:
-   ```
-   .: Infos of all the games :.
-   **Alle Games:**
-   HorizonZeroDawn
-   ELDEN RING
-   [...]
-   
-   Anzahl der Games: 42
-   Gesamtgröße: 848,16 GB
-   ```
+Die `Game`-Klasse ist das Kernstück der Anwendung und repräsentiert ein einzelnes Spiel.
 
-2. **Games.json** (vollständige Liste):
-   ```json
-   {
-     "Games": [
-       {
-         "ExeFile": "D:\\Games\\Epic Games\\HorizonZeroDawn\\HorizonZeroDawn.exe",
-         "GameSizeInGB": "72,23 GB",
-         [...]
-       }
-     ],
-     "GameSizeGB": "848,16 GB"
-   }
-   ```
+**Wichtige Eigenschaften:**
+- `ExeFile`: Pfad zur ausführbaren Datei des Spiels
+- `ExeFileName`: Name der ausführbaren Datei (ohne Erweiterung)
+- `UninstallExe`: Pfad zur Deinstallationsdatei (falls vorhanden)
+- `GameSize`: Größe des Spielordners in Bytes
+- `GameSizeInGB`: Formatierte Größe in Gigabyte
+- `FolderName`: Name des Spielordners (mit bereinigten Sonderzeichen)
+- `GamePath`: Pfad zum Spielordner
 
-## ⚙️ **Technische Details MEINES Codes**
+### 📋 GameList-Klasse
 
-### 🔧 **Wichtige Klassen**
-1. **Game.cs**:
-   - Hauptklasse für Spielinformationen
-   - Methoden:
-     - `FindExeFile()` - Sucht Haupt-EXE
-     - `FindUninstallExe()` - Findet Deinstaller
+```mermaid
+flowchart TD
+    A[Start] --> B[ReadAllGamesFromFolder]
+    B --> C[WriteGamesInfoFile]
+    C --> D[CreateShortcuts]
+    D --> E[ExportJSON]
+```
 
-2. **GameList.cs**:
-   - Verwaltet Liste aller Spiele
-   - Methoden:
-     - `ReadAllGamesFromFolder()` - Scan-Logik
-     - `SortList()` - Sortiert nach Größe
+### 🛠️ ProgramManager-Klasse
 
-3. **ProgramManager.cs**:
-   - Kernfunktionen:
-     - `CreateShortcut()` - Verknüpfungserstellung
-     - `CreateDeleteScript()` - Deinstallationsskript
+![ProgramManager Functions](https://via.placeholder.com/600x300.png?text=ProgramManager+Functions)
 
-### 📏 **Größenberechnung**
+### 🚀 Hauptprogramm
+
+```mermaid
+sequenceDiagram
+    participant Program
+    participant GameList
+    participant ProgramManager
+    
+    Program->>GameList: ReadAllGamesFromFolder()
+    GameList->>Program: List of Games
+    Program->>ProgramManager: CreateShortcuts()
+    Program->>ProgramManager: WriteGamesInfoFile()
+    Program->>GameList: Export to JSON
+```
+
+## 📥 Installation und Verwendung
+
+### Ordnerstruktur-Empfehlung
+
+Für optimale Ergebnisse organisieren Sie Ihre Spiele in Unterordnern nach Plattformen/Herausgebern:
+
+```
+D:\Games
+├── Epic Games
+│   ├── HorizonZeroDawn
+│   ├── FarmingSimulator22
+│   └── AmongUs
+├── EA Games
+│   ├── FIFA23
+│   └── Battlefield2042
+└── PC Games
+    ├── DOOM
+    └── ELDEN RING
+```
+
+**Wichtig:** Jedes Spiel sollte in einem eigenen Unterordner liegen!
+
+### Konfigurationsbeispiel
+
 ```csharp
-private long GetFolderSize(DirectoryInfo d)
+// In Program.cs anpassen:
+string sourcePath = "D:\\Games";          // Hauptspieleordner
+string sourcePath2 = "D:\\SteamLibrary\\steamapps\\common"; // Steam-Ordner
+string[] ignoreFolders = { "backup", "temp", "cache" }; // Zu ignorierende Ordner
+```
+
+## 🔧 Technische Details
+
+### EXE-Erkennungslogik
+
+![EXE Detection Process](https://via.placeholder.com/600x200.png?text=EXE+Detection+Process)
+
+1. Sammelt alle .exe-Dateien
+2. Filtert ungültige Dateien (unins, setup, etc.)
+3. Sortiert nach Priorität (run, EU, launcher)
+4. Wählt die erste passende EXE
+
+## 📊 Beispielkonfiguration
+
+```json
 {
-    long size = 0;
-    // Add file sizes
-    foreach (FileInfo fi in d.GetFiles())
-        size += fi.Length;
-    // Recurse into subdirs
-    foreach (DirectoryInfo di in d.GetDirectories())
-        size += GetFolderSize(di);
-    return size;
+  "Games": [
+    {
+      "ExeFile": "D:\\Games\\Epic Games\\HorizonZeroDawn\\HorizonZeroDawn.exe",
+      "FolderName": "HorizonZeroDawn",
+      "GameSizeInGB": "72.23 GB"
+    },
+    {
+      "ExeFile": "D:\\Games\\Steam\\AoT2\\AOT2_EU.exe",
+      "FolderName": "AoT2",
+      "GameSizeInGB": "39.82 GB"
+    }
+  ],
+  "GameSizeGB": "848.16 GB"
 }
 ```
 
-## 🖥️ **Benutzeroberfläche (Konsolenausgabe)**
+## ✨ Erweiterungsmöglichkeiten
+
+![Future Features](https://via.placeholder.com/600x200.png?text=Future+Features)
+
+1. **Platform Icons**: Erkennung und Anzeige von Plattform-Icons
+2. **Auto-Update**: Automatische Aktualisierung der Spieledaten
+3. **Multi-User**: Unterstützung mehrerer Benutzerprofile
+4. **Cloud Sync**: Synchronisation mit Cloud-Speicher
+
+---
+
+🛠️ **Hinweis zur Ordnerstruktur:**  
+Für beste Ergebnisse sollten Spiele in Unterordnern nach Plattformen organisiert werden (z.B. "Epic Games", "EA Games", "Steam"). Innerhalb dieser Plattform-Ordner sollte jedes Spiel seinen eigenen Ordner haben. Der Game Manager durchsucht diese Struktur rekursiv und erkennt Spiele in beliebiger Tiefe.
+
+Beispiel:
 ```
-Gebrauchte Zeit: 4,32 s (für Scan)
-Shortcut created: D:\Desktop\Games\HorizonZeroDawn.lnk
-Copy to D:\Desktop\Games\ to C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Games\
-```
-
-## 🔄 **Automatische Updates**
-- Bei jedem Start:
-  1. Neu-Scan aller Ordner
-  2. Aktualisierung der Verknüpfungen
-  3. Löschung nicht mehr vorhandener Spiele
-
-## 📦 **Installation & Nutzung**
-1. **Voraussetzungen**:
-   - .NET 6.0 oder höher
-   - Windows 10/11
-   - Adminrechte für Deinstallation
-
-2. **Starten**:
-   ```
-   GameManager.exe
-   ```
-
-3. **Manuelle Scan-Pfade ändern**:
-   ```csharp
-   // In Program.cs anpassen:
-   string sourcePath = "D:\\Games";
-   string sourcePath2 = "D:\\SteamLibrary\\steamapps\\common";
-   ```
-
-## 🌟 **Warum MEIN Programm besonders ist**
-✔ **Keine Installation nötig** - Einfach EXE starten  
-✔ **Respektiert Systemstrukturen** - Keine unerwünschten Änderungen  
-✔ **Volle Transparenz** - Alle Aktionen werden protokolliert  
-✔ **Portabel** - Funktioniert von USB-Stick oder Cloud  
-
-💡 **Tipp**: Für beste Ergebnisse alle Spiele unter `D:\Games\` organisieren!
+D:\Games
+└── Epic Games
+    └── HorizonZeroDawn
+        ├── Binaries
+        ├── Content
+        └── HorizonZeroDawn.exe
 ```
 
-Diese Dokumentation:
-1. Bleibt 100% bei DEINEM originalen Code
-2. Erklärt JEDE wichtige Funktion
-3. Zeigt die tatsächliche Implementierung
-4. Behält deine Dateistruktur bei
-5. Hebt die einzigartigen Aspekte deines Programms hervor
-6. Verwendet nur Beispiele aus deinem originalen JSON
-
-Alle Codeausschnitte sind direkt aus deinen eingereichten Dateien übernommen!
+Diese Struktur hilft bei:
+- Übersichtlicher Organisation
+- Vermeidung von Namenskonflikten
+- Einfacherem Backup und Management
+- Plattformspezifischen Operationen (z.B. Epic-Manifest-Bereinigung)
