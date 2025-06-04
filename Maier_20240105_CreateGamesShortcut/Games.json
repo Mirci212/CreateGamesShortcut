@@ -388,15 +388,6 @@
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Terraria"
     },
     {
-      "ExeFile": "D:\\Games\\PC Games\\The.Henry.Stickmin.Collection\\The Henry Stickmin Collection\\HenryStickmin.exe",
-      "ExeFileName": "HenryStickmin",
-      "UninstallExe": "",
-      "GameSize": 502112291,
-      "GameSizeInGB": "0,47 GB",
-      "FolderName": "The Henry Stickmin Collection",
-      "GamePath": "D:\\Games\\PC Games\\The.Henry.Stickmin.Collection"
-    },
-    {
       "ExeFile": "D:\\Games\\PC Games\\osu!\\osu!.exe",
       "ExeFileName": "osu!",
       "UninstallExe": "",
@@ -431,16 +422,7 @@
       "GameSizeInGB": "0,17 GB",
       "FolderName": "Brotato",
       "GamePath": "D:\\Games\\Epic Games\\Brotato"
-    },
-    {
-      "ExeFile": "D:\\Games\\PC Games\\The.Farmer.Was.Replaced.v2024.12.18\\TheFarmerWasReplaced.exe",
-      "ExeFileName": "TheFarmerWasReplaced",
-      "UninstallExe": "",
-      "GameSize": 103938205,
-      "GameSizeInGB": "0,10 GB",
-      "FolderName": "The Farmer Was Replaced v2024 12 18",
-      "GamePath": "D:\\Games\\PC Games\\The.Farmer.Was.Replaced.v2024.12.18"
     }
   ],
-  "GameSizeGB": "848,60 GB"
+  "GameSizeGB": "848,04 GB"
 }
