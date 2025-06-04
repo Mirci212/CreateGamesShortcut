@@ -43,18 +43,6 @@ public class ProgramManager
         }
     }
 
-    public static string SearchDirectory(string path, string searchName)
-    {
-        foreach(string dir in Directory.GetDirectories(path))
-        {
-            if(dir.ToLower().Contains(searchName.ToLower()))
-            {
-                return dir;
-            }
-        }
-        return null;
-    }
-
     public static void CopyFilesRecursively(string sourcePath, string targetPath)
     {
         //Now Create all of the directories
@@ -113,50 +101,3 @@ public class ProgramManager
     }
 
 }
-
-
-
-//public class InternetClient
-//{
-//    HttpClient client = new HttpClient();
-//    string apiToken = "";
-//    string baseAdress;
-    
-
-//    public InternetClient(string baseAddress)
-//    {
-//        client.BaseAddress = new Uri(baseAddress);
-//    }
-
-//    public InternetClient(string baseAddress, string apiToken) : this(baseAddress)
-//    {
-//        this.apiToken = $"key={apiToken}";
-//    }
-
-//    public async Task<JsonDocument> TryGetJsonAsync(string input,string parameters)
-//    {
-//        try
-//        {
-//            if (apiToken == "")
-//            {
-//                parameters = input + "?" + parameters;
-//            }
-//            else
-//            {
-//                parameters = input + "?" + apiToken + "&" + parameters;
-//            }
-            
-//            return await client.GetFromJsonAsync<JsonDocument>(parameters);
-
-
-//        }
-//        catch (Exception ex)
-//        {
-//            return null;
-//        }
-        
-//    }
-
-
-//}
-

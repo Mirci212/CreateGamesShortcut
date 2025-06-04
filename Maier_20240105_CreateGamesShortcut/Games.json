@@ -3,6 +3,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\HorizonZeroDawn\\HorizonZeroDawn.exe",
       "ExeFileName": "HorizonZeroDawn",
+      "UninstallExe": "",
       "GameSize": 77556294206,
       "GameSizeInGB": "72,23 GB",
       "FolderName": "HorizonZeroDawn",
@@ -11,14 +12,25 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\ELDEN.RING.v1.15.ALL.DLC\\ELDEN.RING.v1.15.ALL.DLC\\eldenring.exe",
       "ExeFileName": "eldenring",
+      "UninstallExe": "",
       "GameSize": 73091252291,
       "GameSizeInGB": "68,07 GB",
       "FolderName": "ELDEN RING v1 15 ALL DLC",
       "GamePath": "D:\\Games\\PC Games\\ELDEN.RING.v1.15.ALL.DLC"
     },
     {
+      "ExeFile": "D:\\Games\\PC Games\\DOOM\\DOOMx64.exe",
+      "ExeFileName": "DOOMx64",
+      "UninstallExe": "D:\\Games\\PC Games\\DOOM\\Uninstall\\unins000.exe",
+      "GameSize": 69058299435,
+      "GameSizeInGB": "64,32 GB",
+      "FolderName": "DOOM",
+      "GamePath": "D:\\Games\\PC Games\\DOOM"
+    },
+    {
       "ExeFile": "D:\\Games\\PC Games\\Anno 1800\\Bin\\Win64\\Anno1800.exe",
       "ExeFileName": "Anno1800",
+      "UninstallExe": "D:\\Games\\PC Games\\Anno 1800\\unins000.exe",
       "GameSize": 60437574540,
       "GameSizeInGB": "56,29 GB",
       "FolderName": "Anno 1800",
@@ -27,6 +39,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Ghost.of.Tsushima.DIRECTORS.CUT.v2024.08.13\\Ghost.of.Tsushima.DIRECTORS.CUT.v2024.08.13\\GhostOfTsushima.exe",
       "ExeFileName": "GhostOfTsushima",
+      "UninstallExe": "",
       "GameSize": 57659883980,
       "GameSizeInGB": "53,70 GB",
       "FolderName": "Ghost of Tsushima DIRECTORS CUT v2024 08 13",
@@ -35,6 +48,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\DYNASTY WARRIORS - ORIGINS\\DWORIGINS.exe",
       "ExeFileName": "DWORIGINS",
+      "UninstallExe": "D:\\Games\\PC Games\\DYNASTY WARRIORS - ORIGINS\\unins000.exe",
       "GameSize": 54319718641,
       "GameSizeInGB": "50,59 GB",
       "FolderName": "DYNASTY WARRIORS   ORIGINS",
@@ -43,6 +57,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Clair Obscur Expedition 33\\Expedition33_Steam.exe",
       "ExeFileName": "Expedition33_Steam",
+      "UninstallExe": "D:\\Games\\PC Games\\Clair Obscur Expedition 33\\Uninstall\\unins000.exe",
       "GameSize": 46569839431,
       "GameSizeInGB": "43,37 GB",
       "FolderName": "Clair Obscur Expedition 33",
@@ -51,6 +66,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\AoT2\\AOT2_EU.exe",
       "ExeFileName": "AOT2_EU",
+      "UninstallExe": "",
       "GameSize": 42751037344,
       "GameSizeInGB": "39,82 GB",
       "FolderName": "AoT2",
@@ -59,6 +75,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\P5R\\P5R.exe",
       "ExeFileName": "P5R",
+      "UninstallExe": "",
       "GameSize": 42302431158,
       "GameSizeInGB": "39,40 GB",
       "FolderName": "P5R",
@@ -67,6 +84,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\FarmingSimulator22\\FarmingSimulator2022.exe",
       "ExeFileName": "FarmingSimulator2022",
+      "UninstallExe": "",
       "GameSize": 40866174008,
       "GameSizeInGB": "38,06 GB",
       "FolderName": "FarmingSimulator22",
@@ -75,6 +93,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Euro Truck Simulator 2\\bin\\win_x64\\eurotrucks2.exe",
       "ExeFileName": "eurotrucks2",
+      "UninstallExe": "D:\\Games\\PC Games\\Euro Truck Simulator 2\\Uninstall\\unins000.exe",
       "GameSize": 33585126328,
       "GameSizeInGB": "31,28 GB",
       "FolderName": "Euro Truck Simulator 2",
@@ -83,6 +102,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Assassins\u0027s Creed 4 - Black Flag\\AC4BFSP.exe",
       "ExeFileName": "AC4BFSP",
+      "UninstallExe": "D:\\Games\\PC Games\\Assassins\u0027s Creed 4 - Black Flag\\unins000.exe",
       "GameSize": 28649363583,
       "GameSizeInGB": "26,68 GB",
       "FolderName": "Assassins\u0027s Creed 4   Black Flag",
@@ -91,6 +111,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Satisfactory\\FactoryGameSteam.exe",
       "ExeFileName": "FactoryGameSteam",
+      "UninstallExe": "",
       "GameSize": 27724990239,
       "GameSizeInGB": "25,82 GB",
       "FolderName": "Satisfactory",
@@ -99,6 +120,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\PCBuildingSimulator2\\PCBS2.exe",
       "ExeFileName": "PCBS2",
+      "UninstallExe": "",
       "GameSize": 27340031793,
       "GameSizeInGB": "25,46 GB",
       "FolderName": "PCBuildingSimulator2",
@@ -107,6 +129,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Persona 5 Strikers Digital Deluxe Edition\\game.exe",
       "ExeFileName": "game",
+      "UninstallExe": "D:\\Games\\PC Games\\Persona 5 Strikers Digital Deluxe Edition\\Uninstall\\unins000.exe",
       "GameSize": 25620276707,
       "GameSizeInGB": "23,86 GB",
       "FolderName": "Persona 5 Strikers Digital Deluxe Edition",
@@ -115,6 +138,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Crash.Bandicoot.4\\Crash Bandicoot 4\\Lava\\Binaries\\Win64\\Lava-Win64-Shipping.exe",
       "ExeFileName": "Lava-Win64-Shipping",
+      "UninstallExe": "",
       "GameSize": 25022438537,
       "GameSizeInGB": "23,30 GB",
       "FolderName": "Crash Bandicoot 4",
@@ -123,6 +147,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Apollo.Justice.Ace.Attorney.Trilogy\\Apollo.Justice.Ace.Attorney.Trilogy\\GS456.exe",
       "ExeFileName": "GS456",
+      "UninstallExe": "",
       "GameSize": 20341542848,
       "GameSizeInGB": "18,94 GB",
       "FolderName": "Apollo Justice Ace Attorney Trilogy",
@@ -131,6 +156,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Ori and the Will of the Wisps\\oriwotw.exe",
       "ExeFileName": "oriwotw",
+      "UninstallExe": "",
       "GameSize": 15514425847,
       "GameSizeInGB": "14,45 GB",
       "FolderName": "Ori and the Will of the Wisps",
@@ -139,6 +165,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Bayonetta.SteamGG.NET\\Bayonetta.exe",
       "ExeFileName": "Bayonetta",
+      "UninstallExe": "",
       "GameSize": 13884131716,
       "GameSizeInGB": "12,93 GB",
       "FolderName": "Bayonetta SteamGG NET",
@@ -147,6 +174,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Harem_Hotel-v0.18.0-pc\\Harem_Hotel-32.exe",
       "ExeFileName": "Harem_Hotel-32",
+      "UninstallExe": "",
       "GameSize": 13405326142,
       "GameSizeInGB": "12,48 GB",
       "FolderName": "Harem_Hotel v0 18 0 pc",
@@ -155,6 +183,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Hades\\Hades\\x64\\Hades.exe",
       "ExeFileName": "Hades",
+      "UninstallExe": "",
       "GameSize": 12569439633,
       "GameSizeInGB": "11,71 GB",
       "FolderName": "Hades",
@@ -163,6 +192,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\The Genesis Order-v.93122\\Game.exe",
       "ExeFileName": "Game",
+      "UninstallExe": "",
       "GameSize": 12275544053,
       "GameSizeInGB": "11,43 GB",
       "FolderName": "The Genesis Order v 93122",
@@ -171,6 +201,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Ori and The Blind Forest - Definitive Edition\\oriDE.exe",
       "ExeFileName": "oriDE",
+      "UninstallExe": "D:\\Games\\PC Games\\Ori and The Blind Forest - Definitive Edition\\unins000.exe",
       "GameSize": 11060690932,
       "GameSizeInGB": "10,30 GB",
       "FolderName": "Ori and The Blind Forest   Definitive Edition",
@@ -179,6 +210,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\The Planet Crafter\\Planet Crafter.exe",
       "ExeFileName": "Planet Crafter",
+      "UninstallExe": "D:\\Games\\PC Games\\The Planet Crafter\\unins000.exe",
       "GameSize": 8084058533,
       "GameSizeInGB": "7,53 GB",
       "FolderName": "The Planet Crafter",
@@ -187,6 +219,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Hollow.Knight.v1.5.78.11833\\Hollow Knight.exe",
       "ExeFileName": "Hollow Knight",
+      "UninstallExe": "",
       "GameSize": 8004194753,
       "GameSizeInGB": "7,45 GB",
       "FolderName": "Hollow Knight v1 5 78 11833",
@@ -195,6 +228,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Schedule I\\Schedule I.exe",
       "ExeFileName": "Schedule I",
+      "UninstallExe": "",
       "GameSize": 7451241999,
       "GameSizeInGB": "6,94 GB",
       "FolderName": "Schedule I",
@@ -203,6 +237,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\The.Great.Ace.Attorney.Chronicles\\The.Great.Ace.Attorney.Chronicles\\TGAAC.exe",
       "ExeFileName": "TGAAC",
+      "UninstallExe": "",
       "GameSize": 6224717374,
       "GameSizeInGB": "5,80 GB",
       "FolderName": "The Great Ace Attorney Chronicles",
@@ -211,6 +246,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Ravenswatch\\Ravenswatch.exe",
       "ExeFileName": "Ravenswatch",
+      "UninstallExe": "",
       "GameSize": 6009635829,
       "GameSizeInGB": "5,60 GB",
       "FolderName": "Ravenswatch",
@@ -219,6 +255,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Rayman Legends\\Rayman Legends.exe",
       "ExeFileName": "Rayman Legends",
+      "UninstallExe": "",
       "GameSize": 5927565147,
       "GameSizeInGB": "5,52 GB",
       "FolderName": "Rayman Legends",
@@ -227,6 +264,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Streamer Life Simulator 2\\windows_content\\Streamer Life Simulator 2.exe",
       "ExeFileName": "Streamer Life Simulator 2",
+      "UninstallExe": "",
       "GameSize": 5868616397,
       "GameSizeInGB": "5,47 GB",
       "FolderName": "Streamer Life Simulator 2",
@@ -235,6 +273,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Cuphead.v1.3.4.Incl.ALL.DLC\\Cuphead.exe",
       "ExeFileName": "Cuphead",
+      "UninstallExe": "",
       "GameSize": 5793094898,
       "GameSizeInGB": "5,40 GB",
       "FolderName": "Cuphead v1 3 4 Incl ALL DLC",
@@ -243,6 +282,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Breeders of the Nephelym Alpha\\OBF.exe",
       "ExeFileName": "OBF",
+      "UninstallExe": "",
       "GameSize": 4550496760,
       "GameSizeInGB": "4,24 GB",
       "FolderName": "Breeders of the Nephelym Alpha",
@@ -251,6 +291,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Sea.of.Stars.Build.12992129\\SeaOfStars.exe",
       "ExeFileName": "SeaOfStars",
+      "UninstallExe": "",
       "GameSize": 4096271200,
       "GameSizeInGB": "3,81 GB",
       "FolderName": "Sea of Stars Build 12992129",
@@ -259,6 +300,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\A.Dance.of.Fire.and.Ice.v2.7.0.Incl.ALL.DLC\\A Dance of Fire and Ice.exe",
       "ExeFileName": "A Dance of Fire and Ice",
+      "UninstallExe": "",
       "GameSize": 2525795749,
       "GameSizeInGB": "2,35 GB",
       "FolderName": "A Dance of Fire and Ice v2 7 0 Incl ALL DLC",
@@ -267,6 +309,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Phoenix.Wright.Ace.Attorney.Trilogy.v2023.07.10\\Phoenix.Wright.Ace.Attorney.Trilogy.v2023.07.10\\PWAAT.exe",
       "ExeFileName": "PWAAT",
+      "UninstallExe": "",
       "GameSize": 2408971315,
       "GameSizeInGB": "2,24 GB",
       "FolderName": "Phoenix Wright Ace Attorney Trilogy v2023 07 10",
@@ -275,6 +318,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\BloonsTD6\\BloonsTD6.exe",
       "ExeFileName": "BloonsTD6",
+      "UninstallExe": "",
       "GameSize": 2181066385,
       "GameSizeInGB": "2,03 GB",
       "FolderName": "BloonsTD6",
@@ -283,6 +327,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Melatonin.v2024.03.11\\Melatonin.exe",
       "ExeFileName": "Melatonin",
+      "UninstallExe": "",
       "GameSize": 1996642194,
       "GameSizeInGB": "1,86 GB",
       "FolderName": "Melatonin v2024 03 11",
@@ -291,6 +336,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\wallpaper_engine\\distribution\\bin\\applicationwallpaperinject32.exe",
       "ExeFileName": "applicationwallpaperinject32",
+      "UninstallExe": "",
       "GameSize": 1683153396,
       "GameSizeInGB": "1,57 GB",
       "FolderName": "wallpaper_engine",
@@ -299,6 +345,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\shapez.2.v0.0.8\\shapez.2.v0.0.8\\shapez 2.exe",
       "ExeFileName": "shapez 2",
+      "UninstallExe": "",
       "GameSize": 1517724551,
       "GameSizeInGB": "1,41 GB",
       "FolderName": "shapez 2 v0 0 8",
@@ -307,6 +354,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\SummertimeSaga-0-20-16-pc\\SummertimeSaga.exe",
       "ExeFileName": "SummertimeSaga",
+      "UninstallExe": "",
       "GameSize": 1283184910,
       "GameSizeInGB": "1,20 GB",
       "FolderName": "SummertimeSaga 0 20 16 pc",
@@ -315,6 +363,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\Stardew.Valley.v1.6.8\\Stardew Valley.exe",
       "ExeFileName": "Stardew Valley",
+      "UninstallExe": "",
       "GameSize": 929999497,
       "GameSizeInGB": "0,87 GB",
       "FolderName": "Stardew Valley v1 6 8",
@@ -323,6 +372,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\AmongUs\\Among Us.exe",
       "ExeFileName": "Among Us",
+      "UninstallExe": "",
       "GameSize": 873583184,
       "GameSizeInGB": "0,81 GB",
       "FolderName": "AmongUs",
@@ -331,6 +381,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Terraria\\Terraria.exe",
       "ExeFileName": "Terraria",
+      "UninstallExe": "",
       "GameSize": 687925078,
       "GameSizeInGB": "0,64 GB",
       "FolderName": "Terraria",
@@ -339,6 +390,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\The.Henry.Stickmin.Collection\\The Henry Stickmin Collection\\HenryStickmin.exe",
       "ExeFileName": "HenryStickmin",
+      "UninstallExe": "",
       "GameSize": 502112291,
       "GameSizeInGB": "0,47 GB",
       "FolderName": "The Henry Stickmin Collection",
@@ -347,6 +399,7 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\osu!\\osu!.exe",
       "ExeFileName": "osu!",
+      "UninstallExe": "",
       "GameSize": 468742897,
       "GameSizeInGB": "0,44 GB",
       "FolderName": "osu!",
@@ -355,6 +408,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\SnakebirdCompletezp91Z\\Snakebird Complete.exe",
       "ExeFileName": "Snakebird Complete",
+      "UninstallExe": "",
       "GameSize": 319167702,
       "GameSizeInGB": "0,30 GB",
       "FolderName": "SnakebirdCompletezp91Z",
@@ -363,6 +417,7 @@
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\CloverPit Demo\\CloverPit.exe",
       "ExeFileName": "CloverPit",
+      "UninstallExe": "",
       "GameSize": 276729385,
       "GameSizeInGB": "0,26 GB",
       "FolderName": "CloverPit Demo",
@@ -371,6 +426,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\Brotato\\Brotato.exe",
       "ExeFileName": "Brotato",
+      "UninstallExe": "",
       "GameSize": 183995429,
       "GameSizeInGB": "0,17 GB",
       "FolderName": "Brotato",
@@ -379,6 +435,7 @@
     {
       "ExeFile": "D:\\Games\\Epic Games\\MinutesTillDawnxgosd\\MinutesTillDawn.exe",
       "ExeFileName": "MinutesTillDawn",
+      "UninstallExe": "",
       "GameSize": 133464101,
       "GameSizeInGB": "0,12 GB",
       "FolderName": "MinutesTillDawnxgosd",
@@ -387,11 +444,12 @@
     {
       "ExeFile": "D:\\Games\\PC Games\\The.Farmer.Was.Replaced.v2024.12.18\\TheFarmerWasReplaced.exe",
       "ExeFileName": "TheFarmerWasReplaced",
+      "UninstallExe": "",
       "GameSize": 103938205,
       "GameSizeInGB": "0,10 GB",
       "FolderName": "The Farmer Was Replaced v2024 12 18",
       "GamePath": "D:\\Games\\PC Games\\The.Farmer.Was.Replaced.v2024.12.18"
     }
   ],
-  "GameSizeGB": "784,76 GB"
+  "GameSizeGB": "849,08 GB"
 }

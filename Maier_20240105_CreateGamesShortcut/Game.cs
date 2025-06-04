@@ -18,6 +18,8 @@ public class Game : IComparable<Game>
 
     public string ExeFileName => Path.GetFileNameWithoutExtension(ExeFile);
 
+    public string UninstallExe { get; set; }
+
     public long GameSize { get; set; }
 
     public string GameSizeInGB => $"{ProgramManager.ConvertBytes(GameSize,"GB"):0.00} GB";
@@ -52,6 +54,7 @@ public class Game : IComparable<Game>
     {
         GamePath = gamePath;
         ExeFile = FindExeFile();
+        UninstallExe = FindUninstallExe(); 
         GameSize = GetFolderSize(new DirectoryInfo(GamePath));
     }
 
@@ -71,6 +74,31 @@ public class Game : IComparable<Game>
 
         // Rückgabe null, wenn keine geeignete EXE-Datei gefunden wurde
         return null;
+    }
+
+    public virtual string FindUninstallExe()
+    {
+        try
+        {
+            // Liste von bevorzugten Dateinamen in Prioritätsreihenfolge
+            string[] preferredNames = {
+            "uninstall.exe",
+            "uninst.exe",
+            "unins000.exe"
+            };
+
+            return Directory.EnumerateFiles(gamePath, "unins*.exe", SearchOption.AllDirectories)
+                .OrderBy(exe => {
+                    string fileName = Path.GetFileName(exe).ToLower();
+                    int index = Array.IndexOf(preferredNames, fileName);
+                    return index == -1 ? int.MaxValue : index;
+                })
+                .FirstOrDefault() ?? "";
+        }
+        catch
+        {
+            return "";
+        }
     }
 
     public bool ExeContainsInvalid(string exeFile)
@@ -160,12 +188,6 @@ public class GameList
 {
     [JsonPropertyName("Games")]
     public List<Game> list { get; set; }
-
-    //public List<Game> Games
-    //{
-    //    get { return list; }
-    //    set { list = value; }
-    //}
 
     public GameList()
     {
