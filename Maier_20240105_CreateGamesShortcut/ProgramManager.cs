@@ -29,7 +29,7 @@ public class ProgramManager
                 CreateShortcut(
                 game.ExeFile,
                 Path.Combine(targetFolder, game.FolderName) + ".lnk",
-                $"{ConvertBytes(game.GameSize, gameSize):n2} {gameSize}"
+                $"{game.GameSizeInGB}"
                 );
 
                 CreateUninstallRegistryEntry(game);
@@ -88,11 +88,11 @@ public class ProgramManager
              $"echo --------------------------------------------------------\n" +
              $"echo.\n" +
              $"echo Spiel: {game.FolderName}\n" +
-             $"echo Größe: {game.GameSizeInGB}\n" +
+             $"echo Groesse: {game.GameSizeInGB}\n" +
              $"echo.\n" +
-             $"echo ACHTUNG: Das Spiel wird komplett gelöscht!\n" +
+             $"echo ACHTUNG: Das Spiel wird komplett geloescht!\n" +
              $"echo.\n" +
-             $"set /p confirm=Möchten Sie '{game.FolderName}' ({game.GameSizeInGB} GB) wirklich deinstallieren? [J/N] \n" +
+             $"set /p confirm=Moechten Sie '{game.FolderName}' ({game.GameSizeInGB} GB) wirklich deinstallieren? [J/N] \n" +
              $"if /i \"%confirm%\" neq \"J\" (\n" +
              $"   echo Deinstallation abgebrochen.\n" +
              $"   pause\n" +
@@ -102,25 +102,25 @@ public class ProgramManager
              $"echo Deinstallation wird gestartet...\n" +
              $"echo.\n" +
              $"\n" +
-             $":: Fortschrittsanzeige beim Löschen\n" +
+             $":: Fortschrittsanzeige beim Loeschen\n" +
              $"echo [                    ] 0%%\n" +
              $"timeout /t 1 /nobreak >nul\n" +
              $"\n" +
-             $":: 1. Verknüpfungen löschen (25%)\n" +
+             $":: 1. Verknüpfungen loeschen (25%)\n" +
              $"del \"{shortcutPath}\" >nul 2>&1\n" +
              $"del \"{Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms)}\\Games\\{game.FolderName}.lnk\" >nul 2>&1\n" +
              $"echo [====                ] 25%%\n" +
              $"\n" +
-             $":: 2. Registry-Einträge entfernen (50%)\n" +
+             $":: 2. Registry-Eintraege entfernen (50%)\n" +
              $"reg delete HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{game.FolderName} /f >nul 2>&1\n" +
              $"echo [========            ] 50%%\n" +
              $"\n" +
-             $":: 3. Spielordner löschen mit Fortschritt\n" +
+             $":: 3. Spielordner loeschen mit Fortschritt\n" +
              $"echo [============        ] 75%%\n" +
              $"if exist \"{game.GamePath}\" (\n" +
              $"   rmdir /s /q \"{game.GamePath}\"\n" +
              $"   if exists \"{game.GamePath}\" (\n" +
-             $"      echo FEHLER beim Löschen des Spielordners!\n" +
+             $"      echo FEHLER beim Loeschen des Spielordners!\n" +
              $"      pause\n" +
              $"      exit /b 1\n" +
              $"   )\n" +
@@ -132,7 +132,7 @@ public class ProgramManager
              $"echo Deinstallation erfolgreich abgeschlossen!\n" +
              $"timeout /t 3 /nobreak >nul\n" +
              $"\n" +
-             $":: Skript selbst löschen\n" +
+             $":: Skript selbst loeschen\n" +
              $"del \"%~f0\" >nul 2>&1";
 
         System.IO.File.WriteAllText(scriptPath, scriptContent);
