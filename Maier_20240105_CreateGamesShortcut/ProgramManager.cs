@@ -130,10 +130,11 @@ public class ProgramManager
              $"echo [====================] 100%%\n" +
              $"echo.\n" +
              $"echo Deinstallation erfolgreich abgeschlossen!\n" +
-             $"timeout /t 3 /nobreak >nul\n" +
+             $"timeout /t 10 /nobreak >nul\n" +
              $"\n" +
              $":: Skript selbst loeschen\n" +
              $"del \"%~f0\" >nul 2>&1";
+             
 
         System.IO.File.WriteAllText(scriptPath, scriptContent);
         return scriptPath;
