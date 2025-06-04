@@ -1,6 +1,5 @@
 # 🎮 Game Manager - Dokumentation
 
-![Game Manager Banner](https://via.placeholder.com/800x200.png?text=Game+Manager+-+Your+Ultimate+Game+Organizer)
 
 ## Inhaltsverzeichnis
 1. [📌 Übersicht](#-übersicht)
@@ -15,8 +14,6 @@
 6. [✨ Erweiterungsmöglichkeiten](#-erweiterungsmöglichkeiten)
 
 ## 📌 Übersicht
-
-![Game Manager Flowchart](https://via.placeholder.com/600x400.png?text=Game+Manager+Workflow)
 
 Der Game Manager ist eine C#-Anwendung, die entwickelt wurde, um eine Sammlung von PC-Spielen zu verwalten. Die Hauptfunktionen umfassen:
 
@@ -72,8 +69,6 @@ flowchart TD
 
 ### 🛠️ ProgramManager-Klasse
 
-![ProgramManager Functions](https://via.placeholder.com/600x300.png?text=ProgramManager+Functions)
-
 ### 🚀 Hauptprogramm
 
 ```mermaid
@@ -124,8 +119,6 @@ string[] ignoreFolders = { "backup", "temp", "cache" }; // Zu ignorierende Ordne
 
 ### EXE-Erkennungslogik
 
-![EXE Detection Process](https://via.placeholder.com/600x200.png?text=EXE+Detection+Process)
-
 1. Sammelt alle .exe-Dateien
 2. Filtert ungültige Dateien (unins, setup, etc.)
 3. Sortiert nach Priorität (run, EU, launcher)
@@ -152,8 +145,6 @@ string[] ignoreFolders = { "backup", "temp", "cache" }; // Zu ignorierende Ordne
 ```
 
 ## ✨ Erweiterungsmöglichkeiten
-
-![Future Features](https://via.placeholder.com/600x200.png?text=Future+Features)
 
 1. **Platform Icons**: Erkennung und Anzeige von Plattform-Icons
 2. **Auto-Update**: Automatische Aktualisierung der Spieledaten
