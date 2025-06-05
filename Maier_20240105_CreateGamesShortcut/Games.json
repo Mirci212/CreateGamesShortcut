@@ -235,6 +235,15 @@
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Schedule I"
     },
     {
+      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Ravenswatch\\Ravenswatch.exe",
+      "ExeFileName": "Ravenswatch",
+      "UninstallExe": "",
+      "GameSize": 6617950081,
+      "GameSizeInGB": "6,16 GB",
+      "FolderName": "Ravenswatch",
+      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Ravenswatch"
+    },
+    {
       "ExeFile": "D:\\Games\\PC Games\\The.Great.Ace.Attorney.Chronicles\\The.Great.Ace.Attorney.Chronicles\\TGAAC.exe",
       "ExeFileName": "TGAAC",
       "UninstallExe": "",
@@ -242,15 +251,6 @@
       "GameSizeInGB": "5,80 GB",
       "FolderName": "The Great Ace Attorney Chronicles",
       "GamePath": "D:\\Games\\PC Games\\The.Great.Ace.Attorney.Chronicles"
-    },
-    {
-      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Ravenswatch\\Ravenswatch.exe",
-      "ExeFileName": "Ravenswatch",
-      "UninstallExe": "",
-      "GameSize": 6009635829,
-      "GameSizeInGB": "5,60 GB",
-      "FolderName": "Ravenswatch",
-      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Ravenswatch"
     },
     {
       "ExeFile": "D:\\Games\\PC Games\\Rayman Legends\\Rayman Legends.exe",
@@ -373,8 +373,8 @@
       "ExeFile": "D:\\Games\\Epic Games\\AmongUs\\Among Us.exe",
       "ExeFileName": "Among Us",
       "UninstallExe": "",
-      "GameSize": 873583184,
-      "GameSizeInGB": "0,81 GB",
+      "GameSize": 921600462,
+      "GameSizeInGB": "0,86 GB",
       "FolderName": "AmongUs",
       "GamePath": "D:\\Games\\Epic Games\\AmongUs"
     },
@@ -424,5 +424,5 @@
       "GamePath": "D:\\Games\\Epic Games\\MinutesTillDawnxgosd"
     }
   ],
-  "GameSizeGB": "847,99 GB"
+  "GameSizeGB": "848,60 GB"
 }

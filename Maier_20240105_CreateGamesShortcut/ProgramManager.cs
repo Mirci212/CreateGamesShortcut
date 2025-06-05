@@ -24,17 +24,16 @@ public class ProgramManager
     {
         foreach (Game game in gameList.list)
         {
-            if (game != null)
-            {
-                CreateShortcut(
-                game.ExeFile,
-                Path.Combine(targetFolder, game.FolderName) + ".lnk",
-                $"{game.GameSizeInGB}"
-                );
+            if (game == null || game.ExeFile == null) continue;
+            
+            CreateShortcut(
+            game.ExeFile,
+            Path.Combine(targetFolder, game.FolderName) + ".lnk",
+            $"{game.GameSizeInGB}"
+            );
 
-                CreateUninstallRegistryEntry(game);
-            }
-
+            CreateUninstallRegistryEntry(game);
+            
         }
     }
 
