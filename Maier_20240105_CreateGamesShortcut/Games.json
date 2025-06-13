@@ -154,6 +154,15 @@
       "GamePath": "D:\\Games\\PC Games\\Apollo.Justice.Ace.Attorney.Trilogy"
     },
     {
+      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Splitgate 2\\launcher.exe",
+      "ExeFileName": "launcher",
+      "UninstallExe": "",
+      "GameSize": 18595171503,
+      "GameSizeInGB": "17,32 GB",
+      "FolderName": "Splitgate 2",
+      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Splitgate 2"
+    },
+    {
       "ExeFile": "D:\\Games\\PC Games\\Ori and the Will of the Wisps\\oriwotw.exe",
       "ExeFileName": "oriwotw",
       "UninstallExe": "",
@@ -208,6 +217,15 @@
       "GamePath": "D:\\Games\\PC Games\\Ori and The Blind Forest - Definitive Edition"
     },
     {
+      "ExeFile": "D:\\Games\\Epic Games\\twopointhospital\\TPH.exe",
+      "ExeFileName": "TPH",
+      "UninstallExe": "",
+      "GameSize": 9149705154,
+      "GameSizeInGB": "8,52 GB",
+      "FolderName": "twopointhospital",
+      "GamePath": "D:\\Games\\Epic Games\\twopointhospital"
+    },
+    {
       "ExeFile": "D:\\Games\\PC Games\\The Planet Crafter\\Planet Crafter.exe",
       "ExeFileName": "Planet Crafter",
       "UninstallExe": "D:\\Games\\PC Games\\The Planet Crafter\\unins000.exe",
@@ -229,8 +247,8 @@
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Schedule I\\Schedule I.exe",
       "ExeFileName": "Schedule I",
       "UninstallExe": "",
-      "GameSize": 7451241999,
-      "GameSizeInGB": "6,94 GB",
+      "GameSize": 7469386357,
+      "GameSizeInGB": "6,96 GB",
       "FolderName": "Schedule I",
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Schedule I"
     },
@@ -422,7 +440,16 @@
       "GameSizeInGB": "0,12 GB",
       "FolderName": "MinutesTillDawnxgosd",
       "GamePath": "D:\\Games\\Epic Games\\MinutesTillDawnxgosd"
+    },
+    {
+      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\8BitB\\8BB.exe",
+      "ExeFileName": "8BB",
+      "UninstallExe": "",
+      "GameSize": 57302907,
+      "GameSizeInGB": "0,05 GB",
+      "FolderName": "8BitB",
+      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\8BitB"
     }
   ],
-  "GameSizeGB": "848,60 GB"
+  "GameSizeGB": "874,51 GB"
 }
