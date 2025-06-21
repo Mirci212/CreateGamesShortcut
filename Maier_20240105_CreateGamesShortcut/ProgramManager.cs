@@ -47,6 +47,7 @@ public class ProgramManager
             key.SetValue("DisplayIcon", game.ExeFile);
             key.SetValue("InstallLocation", Path.GetDirectoryName(game.ExeFile));
             key.SetValue("Publisher", "Games");
+            key.SetValue("EstimatedSize", (int)ConvertBytes(game.GameSize,"KB"),RegistryValueKind.DWord);
 
             if (!string.IsNullOrEmpty(game.UninstallExe))
             {
