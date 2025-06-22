@@ -22,6 +22,12 @@ public class ProgramManager
 
     public static void CreateShortcutsFromGameList(GameList gameList, string targetFolder, string gameSize)
     {
+        CleanUninstallRegistryEntries("Games");
+        string uninstallFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "UninstallGameCmd");
+        foreach (string file in Directory.GetFiles(uninstallFolder))
+        {
+            System.IO.File.Delete(file);
+        }
         foreach (Game game in gameList.list)
         {
             if (game == null || game.ExeFile == null) continue;
@@ -59,6 +65,57 @@ public class ProgramManager
                 // Lösch-Logik wenn kein Uninstaller existiert
                 string deleteScriptPath = CreateDeleteScript(game);
                 key.SetValue("UninstallString", $"cmd.exe /c \"{deleteScriptPath}\"");
+            }
+        }
+    }
+
+    // Hilfsfunktion: Löscht alle Uninstall-Einträge mit einem bestimmten Publisher
+    private static void CleanUninstallRegistryEntries(string publisherName)
+    {
+        string[] registryRoots = {
+        @"Software\Microsoft\Windows\CurrentVersion\Uninstall",  // HKEY_CURRENT_USER
+        @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"   // HKEY_LOCAL_MACHINE
+        };
+
+        foreach (var rootPath in registryRoots)
+        {
+            // HKEY_CURRENT_USER durchsuchen (keine Admin-Rechte nötig)
+            SearchAndDeletePublisherKeys(Registry.CurrentUser, rootPath, publisherName);
+
+            // HKEY_LOCAL_MACHINE durchsuchen (nur mit Admin-Rechten möglich)
+            try
+            {
+                SearchAndDeletePublisherKeys(Registry.LocalMachine, rootPath, publisherName);
+            }
+            catch (System.Security.SecurityException)
+            {
+                Console.WriteLine("Warnung: Keine Berechtigung für HKEY_LOCAL_MACHINE.");
+            }
+        }
+    }
+
+    // Durchsucht einen Registry-Pfad und löscht Einträge mit übereinstimmendem Publisher
+    private static void SearchAndDeletePublisherKeys(RegistryKey rootKey, string subKeyPath, string publisherName)
+    {
+        using (RegistryKey uninstallKey = rootKey.OpenSubKey(subKeyPath))
+        {
+            if (uninstallKey == null) return;
+
+            foreach (string subKeyName in uninstallKey.GetSubKeyNames())
+            {
+                using (RegistryKey appKey = uninstallKey.OpenSubKey(subKeyName, writable: true))
+                {
+                    if (appKey == null) continue;
+
+                    string publisher = appKey.GetValue("Publisher") as string;
+                    if (publisher == publisherName)
+                    {
+                        string displayName = appKey.GetValue("DisplayName") as string ?? subKeyName;
+
+                        appKey.Close(); // Key schließen vor dem Löschen
+                        rootKey.DeleteSubKeyTree($"{subKeyPath}\\{subKeyName}", throwOnMissingSubKey: false);
+                    }
+                }
             }
         }
     }
