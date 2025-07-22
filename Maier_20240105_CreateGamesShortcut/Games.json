@@ -58,7 +58,7 @@
       "ExeFile": "D:\\Games\\PC Games\\Clair Obscur Expedition 33\\Expedition33_Steam.exe",
       "ExeFileName": "Expedition33_Steam",
       "UninstallExe": "D:\\Games\\PC Games\\Clair Obscur Expedition 33\\Uninstall\\unins000.exe",
-      "GameSize": 46569839431,
+      "GameSize": 46569837341,
       "GameSizeInGB": "43,37 GB",
       "FolderName": "Clair Obscur Expedition 33",
       "GamePath": "D:\\Games\\PC Games\\Clair Obscur Expedition 33"
@@ -71,24 +71,6 @@
       "GameSizeInGB": "39,82 GB",
       "FolderName": "AoT2",
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\AoT2"
-    },
-    {
-      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\P5R\\P5R.exe",
-      "ExeFileName": "P5R",
-      "UninstallExe": "",
-      "GameSize": 42302431158,
-      "GameSizeInGB": "39,40 GB",
-      "FolderName": "P5R",
-      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\P5R"
-    },
-    {
-      "ExeFile": "D:\\Games\\Epic Games\\FarmingSimulator22\\FarmingSimulator2022.exe",
-      "ExeFileName": "FarmingSimulator2022",
-      "UninstallExe": "",
-      "GameSize": 40866174008,
-      "GameSizeInGB": "38,06 GB",
-      "FolderName": "FarmingSimulator22",
-      "GamePath": "D:\\Games\\Epic Games\\FarmingSimulator22"
     },
     {
       "ExeFile": "D:\\Games\\PC Games\\Euro Truck Simulator 2\\bin\\win_x64\\eurotrucks2.exe",
@@ -109,11 +91,20 @@
       "GamePath": "D:\\Games\\PC Games\\Assassins\u0027s Creed 4 - Black Flag"
     },
     {
+      "ExeFile": "D:\\Games\\Epic Games\\SidMeiersCivilizationVI\\Base\\Binaries\\Win64EOS\\Civ6_Launcher.exe",
+      "ExeFileName": "Civ6_Launcher",
+      "UninstallExe": "",
+      "GameSize": 27834713262,
+      "GameSizeInGB": "25,92 GB",
+      "FolderName": "SidMeiersCivilizationVI",
+      "GamePath": "D:\\Games\\Epic Games\\SidMeiersCivilizationVI"
+    },
+    {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Satisfactory\\FactoryGameSteam.exe",
       "ExeFileName": "FactoryGameSteam",
       "UninstallExe": "",
-      "GameSize": 27724990239,
-      "GameSizeInGB": "25,82 GB",
+      "GameSize": 27733277702,
+      "GameSizeInGB": "25,83 GB",
       "FolderName": "Satisfactory",
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Satisfactory"
     },
@@ -152,15 +143,6 @@
       "GameSizeInGB": "18,94 GB",
       "FolderName": "Apollo Justice Ace Attorney Trilogy",
       "GamePath": "D:\\Games\\PC Games\\Apollo.Justice.Ace.Attorney.Trilogy"
-    },
-    {
-      "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Splitgate 2\\launcher.exe",
-      "ExeFileName": "launcher",
-      "UninstallExe": "",
-      "GameSize": 18595171503,
-      "GameSizeInGB": "17,32 GB",
-      "FolderName": "Splitgate 2",
-      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Splitgate 2"
     },
     {
       "ExeFile": "D:\\Games\\PC Games\\Ori and the Will of the Wisps\\oriwotw.exe",
@@ -208,6 +190,15 @@
       "GamePath": "D:\\Games\\PC Games\\The Genesis Order-v.93122"
     },
     {
+      "ExeFile": "D:\\Games\\Epic Games\\JWE2\\JWE2.exe",
+      "ExeFileName": "JWE2",
+      "UninstallExe": "",
+      "GameSize": 11550216492,
+      "GameSizeInGB": "10,76 GB",
+      "FolderName": "JWE2",
+      "GamePath": "D:\\Games\\Epic Games\\JWE2"
+    },
+    {
       "ExeFile": "D:\\Games\\PC Games\\Ori and The Blind Forest - Definitive Edition\\oriDE.exe",
       "ExeFileName": "oriDE",
       "UninstallExe": "D:\\Games\\PC Games\\Ori and The Blind Forest - Definitive Edition\\unins000.exe",
@@ -215,24 +206,6 @@
       "GameSizeInGB": "10,30 GB",
       "FolderName": "Ori and The Blind Forest   Definitive Edition",
       "GamePath": "D:\\Games\\PC Games\\Ori and The Blind Forest - Definitive Edition"
-    },
-    {
-      "ExeFile": "D:\\Games\\Epic Games\\twopointhospital\\TPH.exe",
-      "ExeFileName": "TPH",
-      "UninstallExe": "",
-      "GameSize": 9149705154,
-      "GameSizeInGB": "8,52 GB",
-      "FolderName": "twopointhospital",
-      "GamePath": "D:\\Games\\Epic Games\\twopointhospital"
-    },
-    {
-      "ExeFile": "D:\\Games\\PC Games\\The Planet Crafter\\Planet Crafter.exe",
-      "ExeFileName": "Planet Crafter",
-      "UninstallExe": "D:\\Games\\PC Games\\The Planet Crafter\\unins000.exe",
-      "GameSize": 8084058533,
-      "GameSizeInGB": "7,53 GB",
-      "FolderName": "The Planet Crafter",
-      "GamePath": "D:\\Games\\PC Games\\The Planet Crafter"
     },
     {
       "ExeFile": "D:\\Games\\PC Games\\Hollow.Knight.v1.5.78.11833\\Hollow Knight.exe",
@@ -247,7 +220,7 @@
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Schedule I\\Schedule I.exe",
       "ExeFileName": "Schedule I",
       "UninstallExe": "",
-      "GameSize": 7469386357,
+      "GameSize": 7474134809,
       "GameSizeInGB": "6,96 GB",
       "FolderName": "Schedule I",
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Schedule I"
@@ -301,10 +274,19 @@
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Breeders of the Nephelym Alpha\\OBF.exe",
       "ExeFileName": "OBF",
       "UninstallExe": "",
-      "GameSize": 4550496760,
-      "GameSizeInGB": "4,24 GB",
+      "GameSize": 5323892036,
+      "GameSizeInGB": "4,96 GB",
       "FolderName": "Breeders of the Nephelym Alpha",
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Breeders of the Nephelym Alpha"
+    },
+    {
+      "ExeFile": "D:\\Games\\PC Games\\The Planet Crafter\\Planet Crafter.exe",
+      "ExeFileName": "Planet Crafter",
+      "UninstallExe": "D:\\Games\\PC Games\\The Planet Crafter\\unins000.exe",
+      "GameSize": 5045814912,
+      "GameSizeInGB": "4,70 GB",
+      "FolderName": "The Planet Crafter",
+      "GamePath": "D:\\Games\\PC Games\\The Planet Crafter"
     },
     {
       "ExeFile": "D:\\Games\\PC Games\\Sea.of.Stars.Build.12992129\\SeaOfStars.exe",
@@ -314,6 +296,15 @@
       "GameSizeInGB": "3,81 GB",
       "FolderName": "Sea of Stars Build 12992129",
       "GamePath": "D:\\Games\\PC Games\\Sea.of.Stars.Build.12992129"
+    },
+    {
+      "ExeFile": "D:\\Games\\PC Games\\112.Operator.v0.220428.ALL.DLC\\Operator 112.exe",
+      "ExeFileName": "Operator 112",
+      "UninstallExe": "",
+      "GameSize": 3775941947,
+      "GameSizeInGB": "3,52 GB",
+      "FolderName": "112 Operator v0 220428 ALL DLC",
+      "GamePath": "D:\\Games\\PC Games\\112.Operator.v0.220428.ALL.DLC"
     },
     {
       "ExeFile": "D:\\Games\\PC Games\\A.Dance.of.Fire.and.Ice.v2.7.0.Incl.ALL.DLC\\A Dance of Fire and Ice.exe",
@@ -337,8 +328,8 @@
       "ExeFile": "D:\\Games\\Epic Games\\BloonsTD6\\BloonsTD6.exe",
       "ExeFileName": "BloonsTD6",
       "UninstallExe": "",
-      "GameSize": 2181066385,
-      "GameSizeInGB": "2,03 GB",
+      "GameSize": 2243881087,
+      "GameSizeInGB": "2,09 GB",
       "FolderName": "BloonsTD6",
       "GamePath": "D:\\Games\\Epic Games\\BloonsTD6"
     },
@@ -388,15 +379,6 @@
       "GamePath": "D:\\Games\\PC Games\\Stardew.Valley.v1.6.8"
     },
     {
-      "ExeFile": "D:\\Games\\Epic Games\\AmongUs\\Among Us.exe",
-      "ExeFileName": "Among Us",
-      "UninstallExe": "",
-      "GameSize": 921600462,
-      "GameSizeInGB": "0,86 GB",
-      "FolderName": "AmongUs",
-      "GamePath": "D:\\Games\\Epic Games\\AmongUs"
-    },
-    {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\Terraria\\Terraria.exe",
       "ExeFileName": "Terraria",
       "UninstallExe": "",
@@ -415,19 +397,28 @@
       "GamePath": "D:\\Games\\PC Games\\osu!"
     },
     {
-      "ExeFile": "D:\\Games\\Epic Games\\SnakebirdCompletezp91Z\\Snakebird Complete.exe",
-      "ExeFileName": "Snakebird Complete",
+      "ExeFile": "D:\\Games\\PC Games\\Smartphone.Tycoon.v1.0.5\\Smartphone Tycoon.exe",
+      "ExeFileName": "Smartphone Tycoon",
       "UninstallExe": "",
-      "GameSize": 319167702,
-      "GameSizeInGB": "0,30 GB",
-      "FolderName": "SnakebirdCompletezp91Z",
-      "GamePath": "D:\\Games\\Epic Games\\SnakebirdCompletezp91Z"
+      "GameSize": 438709669,
+      "GameSizeInGB": "0,41 GB",
+      "FolderName": "Smartphone Tycoon v1 0 5",
+      "GamePath": "D:\\Games\\PC Games\\Smartphone.Tycoon.v1.0.5"
+    },
+    {
+      "ExeFile": "D:\\Games\\PC Games\\Startup.Company.v1.24\\StartupCompany.exe",
+      "ExeFileName": "StartupCompany",
+      "UninstallExe": "",
+      "GameSize": 430070042,
+      "GameSizeInGB": "0,40 GB",
+      "FolderName": "Startup Company v1 24",
+      "GamePath": "D:\\Games\\PC Games\\Startup.Company.v1.24"
     },
     {
       "ExeFile": "D:\\SteamLibrary\\steamapps\\common\\CloverPit Demo\\CloverPit.exe",
       "ExeFileName": "CloverPit",
       "UninstallExe": "",
-      "GameSize": 276729385,
+      "GameSize": 276775129,
       "GameSizeInGB": "0,26 GB",
       "FolderName": "CloverPit Demo",
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\CloverPit Demo"
@@ -449,7 +440,16 @@
       "GameSizeInGB": "0,05 GB",
       "FolderName": "8BitB",
       "GamePath": "D:\\SteamLibrary\\steamapps\\common\\8BitB"
+    },
+    {
+      "ExeFile": null,
+      "ExeFileName": null,
+      "UninstallExe": "",
+      "GameSize": 230,
+      "GameSizeInGB": "0,00 GB",
+      "FolderName": "Splitgate 2",
+      "GamePath": "D:\\SteamLibrary\\steamapps\\common\\Splitgate 2"
     }
   ],
-  "GameSizeGB": "874,51 GB"
+  "GameSizeGB": "809,03 GB"
 }

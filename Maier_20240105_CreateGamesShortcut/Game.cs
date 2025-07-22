@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 public class Game : IComparable<Game>
 {
-    static protected string[] invalidExe = { "unins", "dot", "handler", "clean", "repo", "inst", "ui", "util", "dx", "setup", "vcredist", "crashsender", "webhelper", "AllOS", "AC4BFMP", "epiclauncher", "Unity", "dedicated", "dump", "ffmpeg", "bootstrapper" };
+    static protected string[] invalidExe = { "unins", "dot", "handler", "clean", "repo", "inst", "ui", "util", "dx", "setup", "vcredist", "crashsender", "webhelper", "AllOS", "AC4BFMP", "epiclauncher", "Unity", "dedicated", "dump", "ffmpeg", "bootstrapper", "notification" };
     static protected string[] priority = { "run", "EU", "launcher" };
 
     string folderName = "";
@@ -213,7 +213,7 @@ public class GameList
     {
         StringBuilder sb = new();
         sb.AppendLine(".: Infos of all the games :.");
-        sb.AppendLine("**Alle Games:** \n" + string.Join("\n", list.Select(x => x.FolderName)));
+        sb.AppendLine("**Alle Games:** \n" + string.Join("\n", list.OrderBy(x => x.FolderName).Select(x => x.FolderName)));
         sb.AppendLine("\nAnzahl der Games: " + list.Count);
         sb.AppendLine($"Gesamtgröße: {GameSizeGB}");
         File.WriteAllText(filename, sb.ToString());
