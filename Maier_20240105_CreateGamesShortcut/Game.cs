@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 public class Game : IComparable<Game>
 {
     static protected string[] invalidExe = { "unins", "dot", "handler", "clean", "repo", "inst", "ui", "util", "dx", "setup", "vcredist", "crashsender", "webhelper", "AllOS", "AC4BFMP", "epiclauncher", "Unity", "dedicated", "dump", "ffmpeg", "bootstrapper", "notification" };
-    static protected string[] priority = { "run", "EU", "launcher" };
+    static protected string[] priority = { "run", "launcher" };
 
     string folderName = "";
     protected string gamePath;
