@@ -25,6 +25,15 @@ JsonSerializerOptions options = new() { WriteIndented = true };
 File.WriteAllText("../../../Games.json", JsonSerializer.Serialize(games.Result, options));
 File.WriteAllText($"{targetPath}Games.json", JsonSerializer.Serialize(games.Result, options));
 
+// Wir filtern alle Einträge heraus, die "steamapps" im Pfad enthalten
+var filteredGames = games.Result.list
+    .Where(g => !g.GamePath.Contains(@"\steamapps\", StringComparison.OrdinalIgnoreCase));
+
+// Serialisierung der gefilterten Liste
+string jsonString = JsonSerializer.Serialize(filteredGames, options);
+
+File.WriteAllText($"{targetPath}/manifests/manifest.json", jsonString);
+
 
 string copyPathFolder = $"{Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms)}\\Games\\";
 

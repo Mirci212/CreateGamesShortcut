@@ -1,29 +1,44 @@
 ﻿using System.Text;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 
 public class Game : IComparable<Game>
 {
-    static protected string[] invalidExe = { "unins", "dot", "handler", "clean", "repo", "inst", "ui", "util", "dx", "setup", "vcredist", "crashsender", "webhelper", "AllOS", "AC4BFMP", "epiclauncher", "Unity", "dedicated", "dump", "ffmpeg", "bootstrapper", "notification" };
+    static protected string[] invalidExe = { "unins", "dot", "handler", "clean", "repo", "inst", "ui", "util", "dx", "setup", "vcredist", "crashsender", "webhelper", "AllOS", "AC4BFMP", "epiclauncher", "Unity", "dedicated", "dump", "ffmpeg", "bootstrapper", "notification", "process","uploader", "selector" };
     static protected string[] priority = { "run", "launcher" };
 
     string folderName = "";
     protected string gamePath;
-    public string ExeFile { get; set; }
+    [JsonPropertyName("target")]
+    public string ExeFile { get; set; } = "";
+
+    public string launchOptions { get; set; } = "";
+
+    public bool appendArgsToExecutable { get; set; } = false;
+
 
     public string ExeFileName => Path.GetFileNameWithoutExtension(ExeFile);
 
-    public string UninstallExe { get; set; }
+    public string UninstallExe { get; set; } = "";
 
     public long GameSize { get; set; }
 
     public string GameSizeInGB => $"{ProgramManager.ConvertBytes(GameSize, "GB"):0.00} GB";
 
+    [JsonPropertyName("title")]
     public string FolderName
     {
         get
         {
-            return folderName.Replace(".", " ").Replace("-", " ");
+            var result = folderName
+                .Replace(".", " ")
+                .Replace("-", " ");
+
+            // mehrere Leerzeichen zu einem zusammenfassen
+            result = Regex.Replace(result, @"\s+", " ");
+
+            return result.Trim();
         }
 
         set
@@ -32,6 +47,7 @@ public class Game : IComparable<Game>
         }
     }
 
+    [JsonPropertyName("startIn")]
     public string GamePath
     {
         get { return gamePath; }
